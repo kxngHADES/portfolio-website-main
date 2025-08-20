@@ -1,0 +1,488 @@
+.projectsSection {
+  padding: 80px 0;
+  min-height: 100vh;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.title {
+  font-size: 3rem;
+  text-align: center;
+  margin-bottom: 60px;
+  color: white;
+  font-weight: 700;
+}
+
+.bentoGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-auto-rows: 550px;
+  gap: 20px;
+  padding: 20px;
+}
+
+.projectCard {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  position: relative;
+  cursor: pointer;
+}
+
+.projectCard:hover {
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+  border-color: rgba(255, 255, 255, 0.4);
+}
+
+.imageContainer {
+  position: relative;
+  height: 55%;
+  overflow: hidden;
+}
+
+.projectImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.projectCard:hover .projectImage {
+  transform: scale(1.1);
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.projectCard:hover .overlay {
+  opacity: 1;
+}
+
+.viewProject {
+  color: white;
+  text-decoration: none;
+  padding: 12px 24px;
+  border: 2px solid white;
+  border-radius: 30px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.viewProject:hover {
+  background: white;
+  color: #667eea;
+  transform: scale(1.05);
+}
+
+.projectContent {
+  padding: 20px;
+  height: 45%;
+  min-height: 220px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.projectTitle {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: white;
+  margin-bottom: 8px;
+}
+
+.projectDescription {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 0.9rem;
+  line-height: 1.4;
+  margin-bottom: 15px;
+}
+
+.technologies {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+  margin-top: auto;
+}
+
+.techIcon {
+  position: relative;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  padding: 8px 12px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  transition: all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  cursor: pointer;
+  overflow: hidden;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.techIcon:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: scale(1.02);
+}
+
+.icon {
+  font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: color 0.4s ease;
+}
+
+.techName {
+  color: white;
+  font-size: 0.75rem;
+  font-weight: 600;
+  opacity: 0;
+  transform: translateX(-8px);
+  transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  width: 0;
+  overflow: hidden;
+}
+
+.techIcon:hover .techName {
+  opacity: 1;
+  transform: translateX(0);
+  width: auto;
+  margin-left: 4px;
+}
+
+/* Technology-specific colors */
+.techIcon[data-name="React"] .icon {
+  color: #61dafb;
+}
+
+.techIcon[data-name="Node.js"] .icon {
+  color: #68a063;
+}
+
+.techIcon[data-name="MongoDB"] .icon {
+  color: #47a248;
+}
+
+.techIcon[data-name="Stripe"] .icon {
+  color: #635bff;
+}
+
+.techIcon[data-name="Python"] .icon {
+  color: #3776ab;
+}
+
+.techIcon[data-name="FastAPI"] .icon {
+  color: #009688;
+}
+
+.techIcon[data-name="WebSocket"] .icon {
+  color: #010101;
+}
+
+.techIcon[data-name="OpenAI"] .icon {
+  color: #412991;
+}
+
+.techIcon[data-name="Next.js"] .icon {
+  color: #000000;
+}
+
+.techIcon[data-name="TypeScript"] .icon {
+  color: #3178c6;
+}
+
+.techIcon[data-name="CSS3"] .icon {
+  color: #1572b6;
+}
+
+.techIcon[data-name="React Native"] .icon {
+  color: #61dafb;
+}
+
+.techIcon[data-name="Firebase"] .icon {
+  color: #ffca28;
+}
+
+.techIcon[data-name="Redux"] .icon {
+  color: #764abc;
+}
+
+.techIcon[data-name="Vue.js"] .icon {
+  color: #4fc08d;
+}
+
+.techIcon[data-name="D3.js"] .icon {
+  color: #f68e56;
+}
+
+.techIcon[data-name="PostgreSQL"] .icon {
+  color: #336791;
+}
+
+.techIcon[data-name="C#"] .icon {
+  color: #239120;
+}
+
+.techIcon[data-name="ASP.NET"] .icon {
+  color: #512bd4;
+}
+
+.techIcon[data-name="Bootstrap"] .icon {
+  color: #7952b3;
+}
+
+.techIcon[data-name="SQL Server"] .icon {
+  color: #cc2927;
+}
+
+.techIcon[data-name="SQLite"] .icon {
+  color: #003b57;
+}
+
+.techIcon[data-name="Google Auth"] .icon {
+  color: #4285f4;
+}
+
+.techIcon[data-name="HTML5"] .icon {
+  color: #e34f26;
+}
+
+.techIcon[data-name="JavaScript"] .icon {
+  color: #f7df1e;
+}
+
+.techIcon[data-name="JSON"] .icon {
+  color: #000000;
+}
+
+.techIcon[data-name="Tkinter"] .icon {
+  color: #306998;
+}
+
+.techIcon[data-name="QRCode"] .icon {
+  color: #000000;
+}
+
+.techIcon[data-name="Cryptography"] .icon {
+  color: #ff6b35;
+}
+
+.techIcon[data-name="C++"] .icon {
+  color: #00599c;
+}
+
+.techIcon[data-name="Django"] .icon {
+  color: #092e20;
+}
+
+.arc {
+  margin-bottom: 40px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(5px);
+  overflow: hidden;
+}
+
+.arcHeader {
+  padding: 20px 25px;
+  background: rgba(255, 255, 255, 0.1);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.arcHeader:hover {
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.arcTitle {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: white;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.arcTitle svg {
+  font-size: 1.2rem;
+  transition: transform 0.3s ease;
+}
+
+.arcContent {
+  padding: 20px;
+}
+
+.chapter {
+  margin-bottom: 30px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.03);
+  overflow: hidden;
+}
+
+.chapterHeader {
+  padding: 15px 20px;
+  background: rgba(255, 255, 255, 0.05);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.chapterTitle {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.9);
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+/* Text-only card styles */
+.textOnlyCard {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.textOnlyCard:hover {
+  background: rgba(255, 255, 255, 0.12);
+  transform: translateY(-5px) scale(1.01);
+}
+
+.fullHeightContent {
+  height: 100%;
+  padding: 25px;
+  justify-content: space-between;
+  min-height: 450px;
+}
+
+.textOnlyActions {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.textOnlyButton {
+  color: white;
+  text-decoration: none;
+  padding: 12px 24px;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-radius: 30px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.textOnlyButton:hover {
+  background: rgba(255, 255, 255, 0.2);
+  border-color: rgba(255, 255, 255, 0.5);
+  transform: scale(1.05);
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .bentoGrid {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-auto-rows: 470px;
+    gap: 15px;
+    padding: 15px;
+  }
+  
+  .arcTitle {
+    font-size: 1.6rem;
+  }
+  
+  .chapterTitle {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .bentoGrid {
+    grid-template-columns: 1fr;
+    grid-auto-rows: 500px;
+    gap: 15px;
+    padding: 15px;
+  }
+  
+  .arcHeader {
+    padding: 15px 20px;
+  }
+  
+  .chapterHeader {
+    padding: 12px 15px;
+  }
+  
+  .arcTitle {
+    font-size: 1.4rem;
+    gap: 10px;
+  }
+  
+  .chapterTitle {
+    font-size: 1.1rem;
+    gap: 8px;
+  }
+  
+  .fullHeightContent {
+    padding: 20px;
+    min-height: 450px;
+  }
+}
+
+@media (max-width: 480px) {
+  .bentoGrid {
+    grid-auto-rows: 470px;
+    gap: 10px;
+    padding: 10px;
+  }
+  
+  .arc {
+    margin-bottom: 30px;
+  }
+  
+  .arcHeader {
+    padding: 12px 15px;
+  }
+  
+  .chapterHeader {
+    padding: 10px 12px;
+  }
+  
+  .arcTitle {
+    font-size: 1.2rem;
+  }
+  
+  .chapterTitle {
+    font-size: 1rem;
+  }
+  
+  .fullHeightContent {
+    padding: 15px;
+    min-height: 420px;
+  }
+  
+  .textOnlyButton {
+    padding: 10px 20px;
+    font-size: 0.9rem;
+  }
+}

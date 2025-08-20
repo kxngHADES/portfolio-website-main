@@ -1,0 +1,459 @@
+.skillsSection {
+  padding: 3rem 1rem;
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+  position: relative;
+}
+
+.title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 1rem;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.hint {
+  text-align: center;
+  color: #64748b;
+  font-size: 1rem;
+  margin-bottom: 3rem;
+  opacity: 0.8;
+}
+
+.categoryFilter {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-bottom: 4rem;
+  flex-wrap: wrap;
+}
+
+.categoryBtn {
+  padding: 0.75rem 1.5rem;
+  border: 2px solid #e2e8f0;
+  background: transparent;
+  border-radius: 2rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: 500;
+  text-transform: capitalize;
+}
+
+.categoryBtn:hover {
+  border-color: #667eea;
+  transform: translateY(-2px);
+}
+
+.categoryBtn.active {
+  background: #667eea;
+  color: white;
+  border-color: #667eea;
+}
+
+.skillsGalaxy {
+  position: relative;
+  min-height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  perspective: 1000px;
+}
+
+.skillsOrbit {
+  position: relative;
+  width: 100%;
+  height: 400px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  transform-style: preserve-3d;
+}
+
+.skillPlanet {
+  position: relative;
+  width: 120px;
+  height: 120px;
+  cursor: pointer;
+  transition: all 0.5s ease;
+  transform-style: preserve-3d;
+}
+
+.planetSphere {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  border-radius: 50%;
+  background: radial-gradient(circle at 30% 30%, #6b7280, #4b5563);
+  box-shadow: 
+    inset -20px -20px 50px rgba(0, 0, 0, 0.5),
+    inset 20px 20px 50px rgba(255, 255, 255, 0.1),
+    0 0 30px rgba(107, 114, 128, 0.3);
+  transition: all 0.5s ease;
+  overflow: hidden;
+}
+
+.planetSurface {
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.planetHighlight {
+  position: absolute;
+  top: 20%;
+  left: 25%;
+  width: 40%;
+  height: 40%;
+  background: radial-gradient(ellipse at center, rgba(255, 255, 255, 0.4) 0%, transparent 70%);
+  border-radius: 50%;
+  transform: rotate(-45deg);
+  filter: blur(5px);
+}
+
+.planetShadow {
+  position: absolute;
+  bottom: -10%;
+  right: -10%;
+  width: 60%;
+  height: 60%;
+  background: radial-gradient(ellipse at center, rgba(0, 0, 0, 0.6) 0%, transparent 70%);
+  border-radius: 50%;
+  filter: blur(8px);
+}
+
+.skillContent {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+}
+
+.skillIcon {
+  font-size: 1.8rem;
+  color: white;
+  filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.8));
+  margin-bottom: 0.25rem;
+}
+
+.skillInfo {
+  text-align: center;
+}
+
+.skillName {
+  font-size: 0.75rem;
+  font-weight: 600;
+  margin: 0;
+  color: white;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+  line-height: 1;
+}
+
+.skillLevel {
+  font-size: 0.6rem;
+  color: white;
+  font-weight: 500;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+  opacity: 0.9;
+}
+
+.orbitRing {
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  right: -10px;
+  bottom: -10px;
+  border: 2px solid #9ca3af;
+  border-radius: 50%;
+  opacity: 0;
+  transition: all 0.5s ease;
+  z-index: -1;
+}
+
+.skillPlanet:hover .planetSphere {
+  transform: scale(1.1) rotateY(15deg);
+  box-shadow: 
+    inset -25px -25px 60px rgba(0, 0, 0, 0.6),
+    inset 25px 25px 60px rgba(255, 255, 255, 0.15),
+    0 0 50px rgba(107, 114, 128, 0.6);
+}
+
+.skillPlanet.selected .planetSphere {
+  transform: scale(1.15) rotateY(25deg);
+  box-shadow: 
+    inset -30px -30px 70px rgba(0, 0, 0, 0.7),
+    inset 30px 30px 70px rgba(255, 255, 255, 0.2),
+    0 0 60px rgba(107, 114, 128, 0.8),
+    0 0 0 3px #9ca3af;
+}
+
+.planetGlow {
+  position: absolute;
+  inset: -15px;
+  border-radius: 50%;
+  background: radial-gradient(circle, #6b7280 0%, transparent 70%);
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  z-index: -1;
+  filter: blur(15px);
+}
+
+.skillPlanet:hover .planetGlow,
+.skillPlanet.selected .planetGlow {
+  opacity: 0.4;
+}
+
+.skillPlanet:hover .orbitRing,
+.skillPlanet.selected .orbitRing {
+  opacity: 0.6;
+  border-color: #9ca3af;
+}
+
+.skillDetails {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  animation: fadeIn 0.3s ease;
+}
+
+.detailsCard {
+  background: linear-gradient(135deg, #2d3748 0%, #1a202c 100%);
+  border: 1px solid #4a5568;
+  border-radius: 1.5rem;
+  padding: 2rem;
+  max-width: 500px;
+  width: 90%;
+  position: relative;
+  animation: slideUp 0.4s ease;
+  color: white;
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.8);
+}
+
+@keyframes slideUp {
+  from { transform: translateY(50px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+.closeBtn {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #a0aec0;
+  transition: color 0.3s ease;
+}
+
+.closeBtn:hover {
+  color: #ef4444;
+}
+
+.detailsHeader {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.detailsPlanet {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 30% 30%, #6b7280, #4b5563);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 
+    inset -10px -10px 20px rgba(0, 0, 0, 0.5),
+    inset 10px 10px 20px rgba(255, 255, 255, 0.1);
+}
+
+.detailsIcon {
+  font-size: 1.5rem;
+  color: white;
+  filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.8));
+}
+
+.detailsTitle {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin: 0;
+  color: #f7fafc;
+}
+
+.detailsLevel {
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.detailsDescription {
+  color: #cbd5e0;
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+}
+
+.librariesSection {
+  border-top: 1px solid #4a5568;
+  padding-top: 1.5rem;
+}
+
+.librariesTitle {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: #e2e8f0;
+}
+
+.librariesList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.libraryTag {
+  display: inline-block;
+  padding: 0.375rem 0.75rem;
+  background: var(--tag-color);
+  color: white;
+  border-radius: 1rem;
+  font-size: 0.75rem;
+  font-weight: 500;
+  animation: fadeInUp 0.5s ease forwards;
+  opacity: 0;
+  transform: translateY(10px);
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Mobile optimizations */
+@media (max-width: 768px) {
+  .skillsSection {
+    padding: 2rem 1rem;
+  }
+  
+  .title {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .hint {
+    color: #64748b;
+  }
+  
+  .skillsGalaxy {
+    min-height: 350px;
+  }
+  
+  .skillsOrbit {
+    height: 350px;
+    gap: 1rem;
+  }
+  
+  .skillPlanet {
+    width: 100px;
+    height: 100px;
+  }
+  
+  .skillIcon {
+    font-size: 1.4rem;
+  }
+  
+  .skillName {
+    font-size: 0.7rem;
+    color: white;
+  }
+  
+  .skillLevel {
+    font-size: 0.55rem;
+    color: white;
+  }
+  
+  .detailsCard {
+    padding: 1.5rem;
+    margin: 1rem;
+  }
+  
+  .detailsPlanet {
+    width: 50px;
+    height: 50px;
+  }
+  
+  .detailsIcon {
+    font-size: 1.25rem;
+  }
+  
+  .detailsTitle {
+    font-size: 1.25rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .skillsOrbit {
+    gap: 0.8rem;
+    height: 300px;
+  }
+  
+  .skillPlanet {
+    width: 80px;
+    height: 80px;
+  }
+  
+  .skillIcon {
+    font-size: 1.2rem;
+  }
+  
+  .skillName {
+    font-size: 0.6rem;
+    color: white;
+  }
+  
+  .skillLevel {
+    font-size: 0.5rem;
+    color: white;
+  }
+  
+  .categoryFilter {
+    gap: 0.25rem;
+  }
+  
+  .categoryBtn {
+    padding: 0.5rem 1rem;
+    font-size: 0.875rem;
+  }
+  .categoryBtn {
+    padding: 0.5rem 1rem;
+    font-size: 0.875rem;
+  }
+}

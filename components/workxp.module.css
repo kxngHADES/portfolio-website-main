@@ -1,0 +1,13 @@
+.container{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Changed from height: 100vh; */
+    justify-content: flex-start;
+    align-items: center;
+    text-align: center;
+    padding-top: 4rem; 
+}
+
+.heading{
+    font-size: 2rem;
+}
