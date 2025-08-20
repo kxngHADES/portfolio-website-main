@@ -211,14 +211,16 @@ const categoryColors = {
   frontend: '#61dafb',
   backend: '#68d391',
   tools: '#fbb6ce',
-  languages: '#f6e05e'
+  languages: '#f6e05e',
+  Platforms: '#a78bfa'
 };
 
 const levelColors = {
   'Beginner': '#fbbf24',
   'Intermediate': '#3b82f6',
   'Advanced': '#10b981',
-  'Expert': '#8b5cf6'
+  'Expert': '#8b5cf6',
+  'Familiar': '#ef4444'
 };
 
 export default function Skills() {

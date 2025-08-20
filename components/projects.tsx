@@ -232,6 +232,7 @@ const Projects = () => {
               id: 13,
               title: "To Be Updated",
               description: "CISCO network for enterprises, SARS tax script with GUI, Finance guide with GUI, Travel mobile app, Neo4j databases, MongoDB databases, Project Management database",
+              image: undefined,
               technologies: [
                 { name: "Python", icon: <FaPython /> },
                 { name: "MongoDB", icon: <SiMongodb /> },
