@@ -3,6 +3,8 @@ import styles from './workxp.module.css'
 import { cn } from '@/utils/cn'
 import { HoverEffect } from './ui/card-hover-effect'
 
+export const runtime = "edge"
+
 const Work_xp = () => {
 
   return (
@@ -17,7 +19,7 @@ const Work_xp = () => {
 
 export const projects = [
     {
-            title: "ASG Studios",
+            title: "",
             roles: "Full Stack Developer",
             description: "Made websites and web applications for local business as well as helped in the process of modernising management like inventory, keeping track of customer purchases at resturants, and helping manage the servers for these companies"
         },
@@ -32,9 +34,9 @@ export const projects = [
             description: "At Plantify i worked in FinTech focusing on backend and API devlopment i did also dive into front end during the MVP and in the website creation"
         },
         {
-          title: "Freelance",
+          title: "ASG Studios",
           roles: "Network Engineer",
-          description: "I worked as a network engineer, I did the planning on how to modify peoples home networks, after drawing up plans and speaking to owners i would connect everything and testing to make sure what was being done fully works, from extending ethernet cables across the house discreetly to setting up servers for people and small businesses in the area."
+          description: "I worked as a network engineer at ASG Studios, I did the planning on how to modify peoples home networks, after designing and speaking to owners I would connect everything and testing to make sure what was being done fully works, from extending ethernet cables across the house discreetly to setting up servers for people and small businesses in the area."
         },
 ];
 

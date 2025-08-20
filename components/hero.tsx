@@ -8,6 +8,8 @@ import { Boxes } from './ui/background-boxes'
 import { cn } from "@/utils/cn";
 import { relative } from 'path'
 
+export const runtime = "edge"
+
 const Hero = () => {
 
     const words = ["Software Engineer", "SOC analyst", "Network engineer", "Project Coordinator", "Data Scientist"]

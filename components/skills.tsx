@@ -28,6 +28,8 @@ import {
 import { DiJava } from 'react-icons/di';
 import { Disc3 } from 'lucide-react';
 
+export const runtime = "edge"
+
 interface Skill {
   name: string;
   level: 'Beginner' | 'Intermediate' | 'Advanced' | 'Expert' | 'Familiar';

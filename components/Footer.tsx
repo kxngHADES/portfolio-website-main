@@ -1,4 +1,5 @@
 import styles from './Footer.module.css';
+export const runtime = "edge"
 
 const Footer = () => {
   return (
