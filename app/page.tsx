@@ -7,8 +7,6 @@ import { Boxes } from "@/components/ui/background-boxes";
 import Work_xp from "@/components/workxp";
 import Image from "next/image";
 
-export const runtime = "edge"
-
 export default function Home() {
   return (
     <div className="">

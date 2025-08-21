@@ -46,7 +46,7 @@ import {
   SiOracle
 } from 'react-icons/si'
 
-export const runtime = "edge"
+
 
 const Projects = () => {
   const [openArcs, setOpenArcs] = useState<number[]>([]);

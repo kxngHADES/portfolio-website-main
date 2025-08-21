@@ -3,7 +3,6 @@ import styles from './workxp.module.css'
 import { cn } from '@/utils/cn'
 import { HoverEffect } from './ui/card-hover-effect'
 
-export const runtime = "edge"
 
 const Work_xp = () => {
 
