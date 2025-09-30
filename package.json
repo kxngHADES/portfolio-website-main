@@ -7,7 +7,8 @@
     "build": "next build",
     "start": "npx serve@latest out",
     "lint": "next lint",
-    "deploy": "echo 'Build completed successfully'"
+    "deploy": "echo 'Build completed successfully'",
+    "cf-deploy": "echo 'Cloudflare Pages: deploy step skipped (static site)'"
   },
   "dependencies": {
     "@tabler/icons-react": "^3.34.1",

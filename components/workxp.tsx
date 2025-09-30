@@ -18,23 +18,23 @@ const Work_xp = () => {
 
 export const projects = [
     {
-            title: "",
-            roles: "Full Stack Developer",
+            title: "Freelance",
+            roles: "Full Stack Developer)",
             description: "Made websites and web applications for local business as well as helped in the process of modernising management like inventory, keeping track of customer purchases at resturants, and helping manage the servers for these companies"
         },
         {
             title: "Lynxio Tech",
-            roles: "Junior Software Engineer (Part-time)",
+            roles: "Junior Software Engineer (Part-time) (start-up)",
             description: "Worked as a part time Jnr Software Engineer working for them under them i was sent to work at Plantify tech a subsidary of Lynxio. At Lynxio i built front end websites with direction from the design team basically my job was to make visions come to life"
         },
         {
             title: "Plantify",
-            roles: "Backend Developer / API Developer",
+            roles: "Backend Developer / API Developer / AI developer (start-up)",
             description: "At Plantify i worked in FinTech focusing on backend and API devlopment i did also dive into front end during the MVP and in the website creation"
         },
         {
           title: "ASG Studios",
-          roles: "Network Engineer",
+          roles: "Network Engineer (Freelance)",
           description: "I worked as a network engineer at ASG Studios, I did the planning on how to modify peoples home networks, after designing and speaking to owners I would connect everything and testing to make sure what was being done fully works, from extending ethernet cables across the house discreetly to setting up servers for people and small businesses in the area."
         },
 ];

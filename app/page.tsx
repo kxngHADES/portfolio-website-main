@@ -12,8 +12,12 @@ export default function Home() {
     <div className="">
       <main className="">
         <Hero/>
-        <Work_xp/>
-        <Projects/>
+        <section id="workxp">
+          <Work_xp/>
+        </section>
+        <section id="projects">
+          <Projects/>
+        </section>
         <Skills/>
         <Footer/>
         {/* <Transcript/>*/}

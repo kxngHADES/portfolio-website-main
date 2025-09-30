@@ -43,7 +43,8 @@ import {
   SiCashapp,
   SiSupabase,
   SiAmazon,
-  SiOracle
+  SiOracle,
+  SiJupyter
 } from 'react-icons/si'
 
 
@@ -105,11 +106,11 @@ const Projects = () => {
     },
     {
       id: 2,
-      title: "Arc 2: I'm Lazy Arc (BSC year 1 Porjects)",
+      title: "Arc 2: I'm Lazy Arc",
       chapters: [
         {
           id: "2-1",
-          title: "Chapter 2: Personal Projects 2023-2024",
+          title: "Personal Projects 2023-2024",
           projects: [
             {
               id: 4,
@@ -223,7 +224,18 @@ const Projects = () => {
           id: "3-1",
           title: "Chapter 1: First Year (C++ Projects)",
           projects: [
-            
+            {
+              id:12,
+              title:"C++ Intro to programming Projects",
+              description: "made 4 Basic console apps for out intro to programming module the programs where: Cafeteria ordering system, Shopping Cart Program, Learner score, ATM machine simulation nothing crazy just very very basic apps with algorithms and a flow chart",
+              technologies: [
+                { name: "C++", icon: <SiCplusplus /> },
+                { name: "File Handling", icon: <SiXampp /> }
+              ],
+              image: "/project/cpp_year1.jpeg",
+              link: "https://github.com/kxngHADES/Cpp_Intro_to_programming",
+              buttonText: "Visit Repository"
+            }
           ]
         },
         {
@@ -232,23 +244,50 @@ const Projects = () => {
           projects: [
             {
               id: 13,
-              title: "To Be Updated",
-              description: "CISCO network for enterprises, SARS tax script with GUI, Finance guide with GUI, Travel mobile app, Neo4j databases, MongoDB databases, Project Management database",
-              image: undefined,
+              title: "Cisco Network for a company",
+              description: "Designed a multi-floor enterprise network with DMZ and servers using Cisco packet tracer.",
+              image: "/project/cisco_year2.jpeg",
               technologies: [
-                { name: "Python", icon: <FaPython /> },
-                { name: "MongoDB", icon: <SiMongodb /> },
-                { name: "Django", icon: <SiDjango /> },
-                {name: "Neo4j", icon: <SiNeo4J /> },
                 {name: "Cisco Packet tracer", icon: <SiCisco /> },
-                {name: "Firebase", icon: <SiFirebase /> },
-                {name: "Supabase", icon: <SiSupabase /> },
-                {name: "AWS cloud", icon: <SiAmazon /> },
-                {name: "Oracle cloud/ Oracle DB", icon: <SiOracle /> },
-                {name: "SQLite", icon: <SiSqlite /> }
               ],
-              link: "#",
-              buttonText: "Coming Soon"
+              link: "https://github.com/kxngHADES/Bugs_network",
+              buttonText: "View Repository"
+            },
+            {
+              id: 2,
+              title: "Tax and an inventory system",
+              description: "Made an inventory system and a tax-budget calculator in Jupyter Notebook.",
+              image: "/project/SARS.png",
+              technologies: [
+                {name: "Python", icon: <SiPython /> },
+                {name: "Jupyter Notebook", icon: <SiJupyter /> },
+              ],
+              link: "https://github.com/kxngHADES/tax-inventory-school-project",
+              buttonText: "View Repository"
+            },
+            {
+              id: 2,
+              title: "Cinema management system",
+              description: "Python cinema system with sockets, JSON, GUI, and secure server DB.",
+              image: "/project/cinema.jpeg",
+              technologies: [
+                {name: "Python", icon: <SiPython /> },
+                {name: "SQL", icon: <SiSqlite /> },
+              ],
+              link: "https://github.com/kxngHADES/tax-inventory-school-project",
+              buttonText: "View Repository"
+            },
+            {
+              id: 3,
+              title: "MongoDB and Neo4j",
+              description: "an OLMS and ONLMS using MongoDB and Neo4j to demonstrate NoSQL and Graph databases",
+              image: "/project/neo4j-mongo.jpeg",
+              technologies: [
+                {name: "Neo4j", icon: <SiNeo4J /> },
+                {name: "MongoDB", icon: <SiMongodb /> },
+              ],
+              link: "https://github.com/kxngHADES/tax-inventory-school-project",
+              buttonText: "View Repository"
             }
           ]
         }

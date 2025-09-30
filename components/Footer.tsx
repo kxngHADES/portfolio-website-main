@@ -24,7 +24,7 @@ const Footer = () => {
           <div className={styles.section}>
             <h3 className={styles.title}>Navigation</h3>
             <nav className={styles.nav}>
-              <a href="#about" className={styles.link}>About</a>
+              <a href="#workxp" className={styles.link}>Work Experience</a>
               <a href="#projects" className={styles.link}>Projects</a>
             </nav>
           </div>

@@ -23,10 +23,11 @@ import {
   SiAndroidauto,
   SiFirebase,
   SiLinux,
-  SiCplusplus
+  SiCplusplus,
 } from 'react-icons/si';
 import { DiJava } from 'react-icons/di';
 import { Disc3 } from 'lucide-react';
+import { FaMicrosoft } from 'react-icons/fa';
 
 
 interface Skill {
@@ -204,6 +205,13 @@ const skills: Skill[] = [
     category: 'languages',
     description: 'c++ used it for arduino and also in my first year',
     icon: <SiCplusplus/>
+  },
+  {
+    name: 'windows server',
+    level: 'Intermediate',
+    category: 'Platforms',
+    description: 'c++ used it for arduino and also in my first year',
+    icon: <FaMicrosoft/>
   },
   
 ];
