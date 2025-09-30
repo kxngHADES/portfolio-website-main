@@ -80,7 +80,7 @@ const Projects = () => {
               id: 2,
               title: "Hangman Basic C#",
               description: "Basic C# game of hangman using arrays and loops nothing complicated",
-              image: "/project/hangman.jpg",
+              image: "/project/hangmancsharp.jpg",
               technologies: [
                 { name: "C#", icon: <SiDotnet /> }
               ],
